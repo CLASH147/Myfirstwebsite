@@ -348,7 +348,7 @@ align-self: center;
 <script>
 	if (window.top != window.self) { // is the outermost document not this document?
 	document.body.innerHTML = "";
-  //document.write = ""; // write an empty text node to the document. (not sure why)
+  document.write = ""; // write an empty text node to the document. (not sure why)
   //window.top.location = window.self.location; // set the parent document's location to this document's location.
   //setTimeout( function(){document.body.innerHTML=""}, 1); // after 1 millisecond make this document's HTML empty. (Probably a memory leak fix)
   window.self.onload = function(){document.body.innerHTML=""} // Another memory leak fix to clear the current document when it is done loading.
